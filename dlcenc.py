@@ -29,13 +29,13 @@ if __name__ == '__main__':
     # example of working with local xml filed
     if False:
         # decoding local file
-        fn = '/home/schdub/Desktop/DLCIndex-v4-35-5-DB313C7522CC127E.xml.base64'
+        fn = 'DLCIndex-v4-35-5-DB313C7522CC127E.xml'
         with open(fn,'rb') as f:
             with open(fn+'.dec','wb') as fo:
                 fo.write(decodeXml(f.read()))
     else:
         # example of encoding local xml file
-        fn = '/home/schdub/Desktop/DLCIndex-v4-35-5-DB313C7522CC127E.xml.base64.dec'
+        fn = 'DLCIndex-v4-35-5-DB313C7522CC127E.xml.dec'
         with open(fn,'rb') as f:
             with open(fn+'.enc','wb') as fo:
                 fo.write(encodeXml(f.read()))
