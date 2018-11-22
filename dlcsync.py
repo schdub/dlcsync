@@ -13,7 +13,7 @@ removeTempFiles = True # delete temp file after unzipping its content
 lang = [ 'all', 'en' ] # en,fr,it,de,es,ko,zh,cn,pt,ru,tc,da,sv,no,nl,tr,th
 tier = [ 'all', '25' ] # 25,50,100,retina,iphone,ipad,ipad3
 LOCAL_DLC_DIR = '~/dlc/' # directory where DLC will be loaded
-URL_DLC_BASE  = 'http://july2018-4-34-0-xpb2jvat.tstodlc.eamobile.com/netstorage/gameasset/direct/simpsons/'
+URL_DLC_BASE  = 'http://oct2018-4-35-0-uam5h44a.tstodlc.eamobile.com/netstorage/gameasset/direct/simpsons/'
 
 def LOG(msg):
 	if verbose: print(msg)
