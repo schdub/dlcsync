@@ -12,6 +12,7 @@ showOnly = False       # only show the list of files that need to be loaded
 removeTempFiles = True # delete temp file after unzipping its content
 lang = [ 'all', 'en' ] # en,fr,it,de,es,ko,zh,cn,pt,ru,tc,da,sv,no,nl,tr,th
 tier = [ 'all', '25' ] # 25,50,100,retina,iphone,ipad,ipad3
+plat = [ 'android', 'ios', 'all' ] # 'android', 'ios', 'all'
 LOCAL_DLC_DIR = '~/dlc/' # directory where DLC will be loaded
 URL_DLC_BASE  = 'http://oct2018-4-35-0-uam5h44a.tstodlc.eamobile.com/netstorage/gameasset/direct/simpsons/'
 
@@ -122,10 +123,12 @@ class DlcIndexParser:
 			self.FileName = attrib['val']
 		elif (tag == 'Language'):
 			self.Language = attrib['val']
+		elif (tag == 'Package'):
+	                self.Platform = attrib['platform']
 	# called for each closing tag.
 	def end(self, tag):
 		if (tag == 'Package'):
-			if (not self.ignorePackage and self.Language in lang):
+			if (not self.ignorePackage and self.Language in lang and self.Platform in plat):
 				need2Download = True
 				fn = self.FileName.replace(':', '/')
 				zeroFile = LOCAL_DLC_DIR + fn[:-4] + '/0'
